@@ -1,0 +1,36 @@
+<style>
+    /* Define CSS styles for the job detail */
+    .job-detail {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .job-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .job-description {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .job-info {
+        color: #888;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="job-detail">
+    <h1 class="job-title">{{ job.title }}</h1>
+    <p class="job-description">{{ job.description }}</p>
+    <p class="job-info">Type: {{ job.type }}</p>
+    <p class="job-info">Location: {{ job.location }}</p>
+</div>

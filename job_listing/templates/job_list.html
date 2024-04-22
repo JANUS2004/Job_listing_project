@@ -1,0 +1,40 @@
+<style>
+    /* Define CSS styles for the job listing */
+    .job-listing {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .job-item {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+
+    .job-item a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .job-item a:hover {
+        color: #0066cc;
+    }
+
+    .job-location {
+        color: #666;
+    }
+</style>
+
+<h1>Job Listings by KOBIKA JANUS</h1>
+<ul class="job-listing">
+    {% for job in jobs %}
+        <li class="job-item">
+            <a href="{% url 'job_detail' pk=job.pk %}">{{ job.title }}</a>
+            - <span class="job-location">{{ job.location }}</span>
+        </li>
+    {% endfor %}
+</ul>
